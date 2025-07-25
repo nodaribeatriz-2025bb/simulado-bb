@@ -1,402 +1,145 @@
+
 import { useState, useEffect } from "react";
 
 const questions = [
+[
   {
-    id: 1,
-    text: 'TEXTO DE INTERPRETAÇÃO para questão 1',
-    question: "Pergunta simulada número 1",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
+    "id": 1,
+    "text": "TEXTO BASE: O Pix muda a forma como realizamos transa\u00e7\u00f5es financeiras...\nEsse avan\u00e7o pode reduzir o uso do papel-moeda, mas ainda h\u00e1 resist\u00eancia por fatores como informalidade, desbancariza\u00e7\u00e3o, cultura e falta de acesso \u00e0 tecnologia.",
+    "question": "O objetivo dessa reportagem \u00e9 refletir sobre",
+    "options": [
+      "a necessidade de implantar um sistema mais seguro do que o cart\u00e3o de cr\u00e9dito para as transfer\u00eancias do aux\u00edlio emergencial.",
+      "a sobreviv\u00eancia do dinheiro em esp\u00e9cie frente ao novo mecanismo de transfer\u00eancia eletr\u00f4nica de valores.",
+      "as consequ\u00eancias negativas da mudan\u00e7a na cultura popular vigente no pa\u00eds sobre a import\u00e2ncia da inser\u00e7\u00e3o no sistema banc\u00e1rio.",
+      "os aspectos relevantes da cultura da informalidade no dia a dia da economia brasileira e as dificuldades de acesso \u00e0 tecnologia.",
+      "os impactos dos meios tradicionais de pagamento, como boleto e cart\u00e3o de cr\u00e9dito, na economia da popula\u00e7\u00e3o."
     ],
-    correct: 1
+    "correct": 1
   },
   {
-    id: 2,
-    text: "",
-    question: "Pergunta simulada número 2",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
+    "id": 2,
+    "text": "TEXTO BASE: O Pix muda a forma como realizamos transa\u00e7\u00f5es financeiras...\nEsse avan\u00e7o pode reduzir o uso do papel-moeda, mas ainda h\u00e1 resist\u00eancia por fatores como informalidade, desbancariza\u00e7\u00e3o, cultura e falta de acesso \u00e0 tecnologia.",
+    "question": "O trecho do texto que explica o sentido do termo 'desbancarizado' \u00e9",
+    "options": [
+      "o avan\u00e7o das transa\u00e7\u00f5es financeiras eletr\u00f4nicas, em detrimento do uso do dinheiro em papel",
+      "aqueles que compram no supermercado com cart\u00e3o de cr\u00e9dito ou usam QR Code para pagar a farm\u00e1cia",
+      "a enorme quantidade de brasileiros que n\u00e3o t\u00eam acesso a servi\u00e7os banc\u00e1rios",
+      "\u00e0 medida que a popula\u00e7\u00e3o incorpore o sistema \u00e0 sua rotina, o uso de DOC, TED, boletos e cart\u00f5es caia",
+      "o pr\u00f3prio com\u00e9rcio incentiva o p\u00fablico mais resistente a aderir a ele"
     ],
-    correct: 2
+    "correct": 2
   },
   {
-    id: 3,
-    text: "",
-    question: "Pergunta simulada número 3",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
+    "id": 3,
+    "text": "TEXTO BASE: O Pix muda a forma como realizamos transa\u00e7\u00f5es financeiras...\nEsse avan\u00e7o pode reduzir o uso do papel-moeda, mas ainda h\u00e1 resist\u00eancia por fatores como informalidade, desbancariza\u00e7\u00e3o, cultura e falta de acesso \u00e0 tecnologia.",
+    "question": "No par\u00e1grafo 2, o trecho \u201cEssa \u00e9 uma pergunta sem resposta f\u00e1cil\u201d refere-se ao seguinte questionamento:",
+    "options": [
+      "\u00c9 o fim do DOC e da TED?",
+      "O boleto banc\u00e1rio est\u00e1 ainda mais amea\u00e7ado de extin\u00e7\u00e3o?",
+      "E o velho cheque vai resistir a esses novos tempos?",
+      "o Pix pode reduzir ou acabar com a circula\u00e7\u00e3o das notas de real?",
+      "E por que o dinheiro em esp\u00e9cie resiste?"
     ],
-    correct: 3
+    "correct": 3
   },
   {
-    id: 4,
-    text: 'TEXTO DE INTERPRETAÇÃO para questão 4',
-    question: "Pergunta simulada número 4",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
+    "id": 4,
+    "text": "TEXTO BASE: O Pix muda a forma como realizamos transa\u00e7\u00f5es financeiras...\nEsse avan\u00e7o pode reduzir o uso do papel-moeda, mas ainda h\u00e1 resist\u00eancia por fatores como informalidade, desbancariza\u00e7\u00e3o, cultura e falta de acesso \u00e0 tecnologia.",
+    "question": "No texto, o referente da palavra ou express\u00e3o em destaque est\u00e1 corretamente explicitado, entre colchetes, no trecho do",
+    "options": [
+      "par\u00e1grafo 5 \u2013 [...] por estar acostumado a elas. [c\u00e9dulas]",
+      "par\u00e1grafo 6 \u2013 [...] pois implica envio ou recebimento imediato. [modalidade]",
+      "par\u00e1grafo 8 \u2013 [...] \u00e0 medida que a popula\u00e7\u00e3o incorpore o sistema \u00e0 sua rotina [papel-moeda]",
+      "par\u00e1grafo 8 \u2013 [...] mas isso n\u00e3o acontecer\u00e1 t\u00e3o cedo [cheque]",
+      "par\u00e1grafo 9 \u2013 [...] \u00e9 necess\u00e1rio, sobretudo, atacar a desbancariza\u00e7\u00e3o. [diminui\u00e7\u00e3o de circula\u00e7\u00e3o]"
     ],
-    correct: 4
+    "correct": 0
   },
   {
-    id: 5,
-    text: "",
-    question: "Pergunta simulada número 5",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
+    "id": 5,
+    "text": "TEXTO BASE: O Pix muda a forma como realizamos transa\u00e7\u00f5es financeiras...\nEsse avan\u00e7o pode reduzir o uso do papel-moeda, mas ainda h\u00e1 resist\u00eancia por fatores como informalidade, desbancariza\u00e7\u00e3o, cultura e falta de acesso \u00e0 tecnologia.",
+    "question": "O uso do acento grave indicativo da crase atende \u00e0s exig\u00eancias da norma-padr\u00e3o da l\u00edngua portuguesa em:",
+    "options": [
+      "o acesso \u00e0 diversas funcionalidades.",
+      "relacionada \u00e0 dupla preocupa\u00e7\u00e3o do governo...",
+      "come\u00e7aram \u00e0 valorizar mais efetivamente...",
+      "correspondem \u00e0 uma categoria muito qualificada...",
+      "estabelecidos para \u00e0 abertura de contas banc\u00e1rias..."
     ],
-    correct: 0
+    "correct": 1
   },
   {
-    id: 6,
-    text: "",
-    question: "Pergunta simulada número 6",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
+    "id": 6,
+    "text": "TEXTO BASE: O Pix muda a forma como realizamos transa\u00e7\u00f5es financeiras...\nEsse avan\u00e7o pode reduzir o uso do papel-moeda, mas ainda h\u00e1 resist\u00eancia por fatores como informalidade, desbancariza\u00e7\u00e3o, cultura e falta de acesso \u00e0 tecnologia.",
+    "question": "A segunda frase expressa, em rela\u00e7\u00e3o \u00e0 primeira, a ideia de:",
+    "options": [
+      "condi\u00e7\u00e3o",
+      "tempo",
+      "contradi\u00e7\u00e3o",
+      "finalidade",
+      "conclus\u00e3o"
     ],
-    correct: 1
+    "correct": 4
   },
   {
-    id: 7,
-    text: 'TEXTO DE INTERPRETAÇÃO para questão 7',
-    question: "Pergunta simulada número 7",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
+    "id": 7,
+    "text": "TEXTO BASE: O Pix muda a forma como realizamos transa\u00e7\u00f5es financeiras...\nEsse avan\u00e7o pode reduzir o uso do papel-moeda, mas ainda h\u00e1 resist\u00eancia por fatores como informalidade, desbancariza\u00e7\u00e3o, cultura e falta de acesso \u00e0 tecnologia.",
+    "question": "No trecho 'implica envio ou recebimento imediato', o sentido de 'implica' \u00e9:",
+    "options": [
+      "acarretar",
+      "comprometer",
+      "hostilizar",
+      "importunar",
+      "requerer"
     ],
-    correct: 2
+    "correct": 0
   },
   {
-    id: 8,
-    text: "",
-    question: "Pergunta simulada número 8",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
+    "id": 8,
+    "text": "TEXTO BASE: O Pix muda a forma como realizamos transa\u00e7\u00f5es financeiras...\nEsse avan\u00e7o pode reduzir o uso do papel-moeda, mas ainda h\u00e1 resist\u00eancia por fatores como informalidade, desbancariza\u00e7\u00e3o, cultura e falta de acesso \u00e0 tecnologia.",
+    "question": "O emprego da v\u00edrgula est\u00e1 plenamente observado em:",
+    "options": [
+      "que em outra \u00e9poca, n\u00e3o conseguiam pagar...",
+      "por ser um instrumento, pouco confi\u00e1vel...",
+      "\u00e9 importante, diagnosticar o p\u00fablico...",
+      "ocorrerem roubo e perda do cart\u00e3o, a primeira provid\u00eancia...",
+      "seja ela particular ou p\u00fablica requer um cuidado..."
     ],
-    correct: 3
+    "correct": 3
   },
   {
-    id: 9,
-    text: "",
-    question: "Pergunta simulada número 9",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
+    "id": 9,
+    "text": "TEXTO BASE: O Pix muda a forma como realizamos transa\u00e7\u00f5es financeiras...\nEsse avan\u00e7o pode reduzir o uso do papel-moeda, mas ainda h\u00e1 resist\u00eancia por fatores como informalidade, desbancariza\u00e7\u00e3o, cultura e falta de acesso \u00e0 tecnologia.",
+    "question": "A palavra destacada est\u00e1 empregada corretamente em:",
+    "options": [
+      "problemas psicol\u00f3gicos causados pelo v\u00edcio da tecnologia.",
+      "v\u00eddeos informativos que esclare\u00e7am os usu\u00e1rios...",
+      "n\u00e3o tem interesse de garantir um projeto...",
+      "para que se reduzam as tentativas de fraude...",
+      "entre os principais do pa\u00eds, decidiram que..."
     ],
-    correct: 4
+    "correct": 3
   },
   {
-    id: 10,
-    text: 'TEXTO DE INTERPRETAÇÃO para questão 10',
-    question: "Pergunta simulada número 10",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
+    "id": 10,
+    "text": "TEXTO BASE: O Pix muda a forma como realizamos transa\u00e7\u00f5es financeiras...\nEsse avan\u00e7o pode reduzir o uso do papel-moeda, mas ainda h\u00e1 resist\u00eancia por fatores como informalidade, desbancariza\u00e7\u00e3o, cultura e falta de acesso \u00e0 tecnologia.",
+    "question": "O pronome est\u00e1 colocado corretamente em:",
+    "options": [
+      "para que obtenha-se o ideal...",
+      "o que considera-se ben\u00e9fico...",
+      "encontram muita dificuldade para realiz\u00e1-las.",
+      "Desde que implantou-se o Pix...",
+      "n\u00e3o sentimo-nos confiantes para operar..."
     ],
-    correct: 0
-  },
-  {
-    id: 11,
-    text: "",
-    question: "Pergunta simulada número 11",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 1
-  },
-  {
-    id: 12,
-    text: "",
-    question: "Pergunta simulada número 12",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 2
-  },
-  {
-    id: 13,
-    text: 'TEXTO DE INTERPRETAÇÃO para questão 13',
-    question: "Pergunta simulada número 13",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 3
-  },
-  {
-    id: 14,
-    text: "",
-    question: "Pergunta simulada número 14",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 4
-  },
-  {
-    id: 15,
-    text: "",
-    question: "Pergunta simulada número 15",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 0
-  },
-  {
-    id: 16,
-    text: 'TEXTO DE INTERPRETAÇÃO para questão 16',
-    question: "Pergunta simulada número 16",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 1
-  },
-  {
-    id: 17,
-    text: "",
-    question: "Pergunta simulada número 17",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 2
-  },
-  {
-    id: 18,
-    text: "",
-    question: "Pergunta simulada número 18",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 3
-  },
-  {
-    id: 19,
-    text: 'TEXTO DE INTERPRETAÇÃO para questão 19',
-    question: "Pergunta simulada número 19",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 4
-  },
-  {
-    id: 20,
-    text: "",
-    question: "Pergunta simulada número 20",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 0
-  },
-  {
-    id: 21,
-    text: "",
-    question: "Pergunta simulada número 21",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 1
-  },
-  {
-    id: 22,
-    text: 'TEXTO DE INTERPRETAÇÃO para questão 22',
-    question: "Pergunta simulada número 22",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 2
-  },
-  {
-    id: 23,
-    text: "",
-    question: "Pergunta simulada número 23",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 3
-  },
-  {
-    id: 24,
-    text: "",
-    question: "Pergunta simulada número 24",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 4
-  },
-  {
-    id: 25,
-    text: 'TEXTO DE INTERPRETAÇÃO para questão 25',
-    question: "Pergunta simulada número 25",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 0
-  },
-  {
-    id: 26,
-    text: "",
-    question: "Pergunta simulada número 26",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 1
-  },
-  {
-    id: 27,
-    text: "",
-    question: "Pergunta simulada número 27",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 2
-  },
-  {
-    id: 28,
-    text: 'TEXTO DE INTERPRETAÇÃO para questão 28',
-    question: "Pergunta simulada número 28",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 3
-  },
-  {
-    id: 29,
-    text: "",
-    question: "Pergunta simulada número 29",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 4
-  },
-  {
-    id: 30,
-    text: "",
-    question: "Pergunta simulada número 30",
-    options: [
-      "Alternativa A",
-      "Alternativa B",
-      "Alternativa C",
-      "Alternativa D",
-      "Alternativa E"
-    ],
-    correct: 0
-  },
+    "correct": 2
+  }
+]
 ];
 
 export default function App() {
   const [answers, setAnswers] = useState({});
   const [showResult, setShowResult] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(2700); // 45 minutos
+  const [timeLeft, setTimeLeft] = useState(2700);
 
   useEffect(() => {
     if (timeLeft > 0 && !showResult) {
