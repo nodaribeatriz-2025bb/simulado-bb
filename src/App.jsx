@@ -3,72 +3,394 @@ import { useState, useEffect } from "react";
 const questions = [
   {
     id: 1,
-    text: `TEXTO I
-“A forma como usamos o dinheiro está mudando. O avanço das transações financeiras eletrônicas, em detrimento do uso do dinheiro em papel, tem transformado a maneira como lidamos com nossas finanças. O Pix, criado pelo Banco Central, acelerou essa mudança, especialmente durante a pandemia, ao permitir transferências rápidas e gratuitas entre pessoas e empresas.”`,
-    question: "O objetivo principal do TEXTO I é:",
+    text: 'TEXTO DE INTERPRETAÇÃO para questão 1',
+    question: "Pergunta simulada número 1",
     options: [
-      "Divulgar a história do dinheiro em papel.",
-      "Explicar a origem do Banco Central.",
-      "Informar sobre mudanças no uso do dinheiro com o Pix.",
-      "Criticar os métodos tradicionais de pagamento.",
-      "Relatar as dificuldades do sistema bancário."
-    ],
-    correct: 2
-  },
-  {
-    id: 2,
-    text: `TEXTO II
-“Um dos efeitos colaterais da pandemia foi o aumento das transações digitais. Mesmo pessoas sem conta em banco foram obrigadas a lidar com o universo digital para receber benefícios do governo, fazer compras ou transferências. Esse fenômeno trouxe à tona a realidade dos chamados ‘desbancarizados’, ou seja, aqueles que não têm acesso a serviços bancários básicos.”`,
-    question: "O trecho que melhor define o termo ‘desbancarizados’ é:",
-    options: [
-      "‘Efeitos colaterais da pandemia’",
-      "‘Pessoas com conta em banco’",
-      "‘Receber benefícios do governo’",
-      "‘Sem acesso a serviços bancários’",
-      "‘Compras ou transferências’"
-    ],
-    correct: 3
-  },
-  {
-    id: 3,
-    text: "",
-    question: "A palavra ‘gratuitas’ no TEXTO I indica que as transferências por Pix são:",
-    options: [
-      "Pagas com desconto.",
-      "Sem custo para o usuário.",
-      "Exclusivas para empresas.",
-      "Permitidas somente à noite.",
-      "Oferecidas apenas por bancos privados."
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
     ],
     correct: 1
   },
   {
-    id: 4,
+    id: 2,
     text: "",
-    question: "De acordo com os textos, um dos principais efeitos da pandemia foi:",
+    question: "Pergunta simulada número 2",
     options: [
-      "A volta do uso de cheques.",
-      "A redução dos pagamentos em cartão.",
-      "O aumento das transações digitais.",
-      "A criação de novos bancos físicos.",
-      "O fim do papel-moeda."
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
     ],
     correct: 2
   },
   {
-    id: 5,
+    id: 3,
     text: "",
-    question: "O termo ‘em detrimento do uso do dinheiro em papel’ indica:",
+    question: "Pergunta simulada número 3",
     options: [
-      "A substituição gradual por cartões magnéticos.",
-      "A preferência crescente por moedas estrangeiras.",
-      "A valorização do dinheiro físico.",
-      "A queda do uso do papel-moeda.",
-      "O aumento da inflação."
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
     ],
     correct: 3
-  }
-  // ... (incluir até a questão 45)
+  },
+  {
+    id: 4,
+    text: 'TEXTO DE INTERPRETAÇÃO para questão 4',
+    question: "Pergunta simulada número 4",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 4
+  },
+  {
+    id: 5,
+    text: "",
+    question: "Pergunta simulada número 5",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 0
+  },
+  {
+    id: 6,
+    text: "",
+    question: "Pergunta simulada número 6",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 1
+  },
+  {
+    id: 7,
+    text: 'TEXTO DE INTERPRETAÇÃO para questão 7',
+    question: "Pergunta simulada número 7",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 2
+  },
+  {
+    id: 8,
+    text: "",
+    question: "Pergunta simulada número 8",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 3
+  },
+  {
+    id: 9,
+    text: "",
+    question: "Pergunta simulada número 9",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 4
+  },
+  {
+    id: 10,
+    text: 'TEXTO DE INTERPRETAÇÃO para questão 10',
+    question: "Pergunta simulada número 10",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 0
+  },
+  {
+    id: 11,
+    text: "",
+    question: "Pergunta simulada número 11",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 1
+  },
+  {
+    id: 12,
+    text: "",
+    question: "Pergunta simulada número 12",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 2
+  },
+  {
+    id: 13,
+    text: 'TEXTO DE INTERPRETAÇÃO para questão 13',
+    question: "Pergunta simulada número 13",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 3
+  },
+  {
+    id: 14,
+    text: "",
+    question: "Pergunta simulada número 14",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 4
+  },
+  {
+    id: 15,
+    text: "",
+    question: "Pergunta simulada número 15",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 0
+  },
+  {
+    id: 16,
+    text: 'TEXTO DE INTERPRETAÇÃO para questão 16',
+    question: "Pergunta simulada número 16",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 1
+  },
+  {
+    id: 17,
+    text: "",
+    question: "Pergunta simulada número 17",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 2
+  },
+  {
+    id: 18,
+    text: "",
+    question: "Pergunta simulada número 18",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 3
+  },
+  {
+    id: 19,
+    text: 'TEXTO DE INTERPRETAÇÃO para questão 19',
+    question: "Pergunta simulada número 19",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 4
+  },
+  {
+    id: 20,
+    text: "",
+    question: "Pergunta simulada número 20",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 0
+  },
+  {
+    id: 21,
+    text: "",
+    question: "Pergunta simulada número 21",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 1
+  },
+  {
+    id: 22,
+    text: 'TEXTO DE INTERPRETAÇÃO para questão 22',
+    question: "Pergunta simulada número 22",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 2
+  },
+  {
+    id: 23,
+    text: "",
+    question: "Pergunta simulada número 23",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 3
+  },
+  {
+    id: 24,
+    text: "",
+    question: "Pergunta simulada número 24",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 4
+  },
+  {
+    id: 25,
+    text: 'TEXTO DE INTERPRETAÇÃO para questão 25',
+    question: "Pergunta simulada número 25",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 0
+  },
+  {
+    id: 26,
+    text: "",
+    question: "Pergunta simulada número 26",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 1
+  },
+  {
+    id: 27,
+    text: "",
+    question: "Pergunta simulada número 27",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 2
+  },
+  {
+    id: 28,
+    text: 'TEXTO DE INTERPRETAÇÃO para questão 28',
+    question: "Pergunta simulada número 28",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 3
+  },
+  {
+    id: 29,
+    text: "",
+    question: "Pergunta simulada número 29",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 4
+  },
+  {
+    id: 30,
+    text: "",
+    question: "Pergunta simulada número 30",
+    options: [
+      "Alternativa A",
+      "Alternativa B",
+      "Alternativa C",
+      "Alternativa D",
+      "Alternativa E"
+    ],
+    correct: 0
+  },
 ];
 
 export default function App() {
